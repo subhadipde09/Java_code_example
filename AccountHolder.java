@@ -12,7 +12,7 @@ class Account{
         }
     }
    void Withdraw(int amt,String g1){
-        bal=bal-amt;
+       bal=bal-amt;
         System.out.println(g1+" Transaction successful : "+amt);
         System.out.println(g1+" current balance : "+bal);
     }
@@ -27,12 +27,12 @@ class Customer implements Runnable{
 
    }
    public void run(){
-       synchronized (r1) { //this keyword use for
+       synchronized (r1) { // use for synchronized the user
            Scanner s1=new Scanner(System.in);
            System.out.println("Enter your withdraw amount " + v1 + ":");
            int RS = s1.nextInt();
            if (r1.isSufficientBalance(RS)) {
-               r1.Withdraw(RS, v1);
+               r1.Withdraw(RS,v1);
            } else {
                System.out.println("Insufficient Balance");
            }
