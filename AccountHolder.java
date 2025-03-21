@@ -11,30 +11,30 @@ class Account{
             return false;
         }
     }
-   void Withdraw(int amt,String g1){
-       bal=bal-amt;
-        System.out.println(g1+" Transaction successful : "+amt);
+   void Withdraw(int RS,String g1){
+       bal=bal-RS;
+        System.out.println(g1+" Transaction successful : "+RS);
         System.out.println(g1+" current balance : "+bal);
     }
 
 }
 class Customer implements Runnable{
-   Account r1;
-   String v1;
+   Account Amt;
+   String name;
    Customer(Account j1, String m1){
-      r1=j1;
-      v1=m1;
+      Amt=j1;
+      name=m1;
 
    }
    public void run(){
-       synchronized (r1) { // use for synchronized the user
+       synchronized (Amt) { // use for synchronized the user
            Scanner s1=new Scanner(System.in);
-           System.out.println("Enter your withdraw amount " + v1 + ":");
+           System.out.println("Enter your withdraw amount " + name + ":");
            int RS = s1.nextInt();
-           if (r1.isSufficientBalance(RS)) {
-               r1.Withdraw(RS,v1);
+           if (Amt.isSufficientBalance(RS)) {
+               Amt.Withdraw(RS,name);
            } else {
-               System.out.println("Insufficient Balance");
+               System.out.println(name+" Insufficient Balance");
            }
        }
    }
