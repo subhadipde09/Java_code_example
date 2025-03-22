@@ -21,14 +21,17 @@ public class LoginS extends JFrame{
         JTextField t1=new JTextField();
         t1.setBounds(200, 200,100,30);
         add(t1); **/
-    l1=new JLabel("Welcome You");
+       Cursor c1=new Cursor(Cursor.HAND_CURSOR);
+    l1=new JLabel("WELCOME");
     l2=new JLabel("USERNAME");
     l3=new JLabel("PASSWORD");
     l4=new JLabel();
     t1=new JTextField();
     t2=new JTextField();
     b1=new JButton("LOGIN");
+    b1.setCursor(c1);
     b2=new JButton("CLEAR");
+    b2.setCursor(c1);
         add(l1);
         add(l2);
         add(l3);
@@ -67,12 +70,12 @@ public class LoginS extends JFrame{
         public void actionPerformed(ActionEvent e1) {
             String s1 = t1.getText();
             String s2 = t2.getText();
-            if (s1.equals("SUBHADIP") && s2.equals("12345")) {
-                l4.setText("Login Successful !");
-            }
-            else {
-                l4.setText("Login Unsuccessful !");
-            }
+                if (s1.equals("subhadip") && s2.equals("12345")) {
+                    l4.setText("Login Successful !");
+                } else {
+                    l4.setText("Login Unsuccessful !");
+                }
+
         }
     }
     class clearB implements ActionListener{
