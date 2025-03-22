@@ -14,6 +14,8 @@ public class LoginS extends JFrame{
 
     }
     void setComponent(){
+        Cursor c1=new Cursor(Cursor.HAND_CURSOR);
+        Font f1=new Font("Times New Roman",Font.ITALIC,30);
        /** JLabel l1=new JLabel("welcome");
         add(l1);
         setLayout(null);
@@ -21,8 +23,10 @@ public class LoginS extends JFrame{
         JTextField t1=new JTextField();
         t1.setBounds(200, 200,100,30);
         add(t1); **/
-       Cursor c1=new Cursor(Cursor.HAND_CURSOR);
+
     l1=new JLabel("WELCOME");
+    l1.setForeground(Color.blue);
+    l1.setFont(f1);
     l2=new JLabel("USERNAME");
     l3=new JLabel("PASSWORD");
     l4=new JLabel();
@@ -30,8 +34,12 @@ public class LoginS extends JFrame{
     t2=new JTextField();
     b1=new JButton("LOGIN");
     b1.setCursor(c1);
+    b1.setBackground(Color.green);
+    b1.setForeground(Color.black);
     b2=new JButton("CLEAR");
     b2.setCursor(c1);
+        b2.setBackground(Color.green);
+        b2.setForeground(Color.black);
         add(l1);
         add(l2);
         add(l3);
@@ -41,7 +49,7 @@ public class LoginS extends JFrame{
         add(b1);
         add(b2);
         setLayout(null);
-    l1.setBounds(640,200,100,50);
+    l1.setBounds(620,170,200,50);
     l2.setBounds(500,250,100,50);
     l3.setBounds(500,300,100,50);
     l4.setBounds(630,400,200,50);
@@ -71,6 +79,7 @@ public class LoginS extends JFrame{
             String s1 = t1.getText();
             String s2 = t2.getText();
                 if (s1.equals("subhadip") && s2.equals("12345")) {
+                    JOptionPane.showMessageDialog(null,"Login Successful.");
                     l4.setText("Login Successful !");
                 } else {
                     l4.setText("Login Unsuccessful !");
