@@ -15,7 +15,7 @@ public class LoginS extends JFrame{
     }
     void setComponent(){
         Cursor c1=new Cursor(Cursor.HAND_CURSOR);
-        Font f1=new Font("Times New Roman",Font.ITALIC,30);
+        Font f1=new Font("Times New Roman",Font.BOLD,30);
        /** JLabel l1=new JLabel("welcome");
         add(l1);
         setLayout(null);
@@ -25,7 +25,7 @@ public class LoginS extends JFrame{
         add(t1); **/
 
     l1=new JLabel("WELCOME");
-    l1.setForeground(Color.blue);
+    l1.setForeground(Color.red);
     l1.setFont(f1);
     l2=new JLabel("USERNAME");
     l3=new JLabel("PASSWORD");
