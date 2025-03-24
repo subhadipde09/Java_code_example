@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class FileH1 {
     public static void main(String []x) throws IOException {
-        File f1 = new File("a.text");
+        File f1 = new File("File1.text");
         f1.createNewFile();
         System.out.println(f1.exists());
         FileOutputStream h1 = new FileOutputStream(f1, true);
